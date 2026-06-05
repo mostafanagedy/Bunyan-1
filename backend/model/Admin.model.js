@@ -33,7 +33,7 @@ adminSchema.pre('save', async function (next) {
 });
 
 adminSchema.methods.comparePassword = async function (matched) {
-  return await bcrypt.compare(matched, this.passowrd);
+  return await bcrypt.compare(matched, this.password);
 };
 
 //* model

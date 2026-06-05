@@ -20,6 +20,10 @@ app.get('/test', (req, res) => {
     msg: 'Test Router',
   });
 });
+
+//* Admin Routes
+const adminRoutes = require('./routes/admin.routes');
+app.use('/api/admin', adminRoutes);
 //* Connection DB
 const conectedDb = require('./config/db');
 conectedDb();
